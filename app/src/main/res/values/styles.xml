@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppCustomTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darkGray</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_chevron_left_black_24dp</item>
+
+    </style>
+
+    <!-- toolbar theme -->
+    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+
+    <style name="MyToolbarPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/orange</item>
+        <item name="tabSelectedTextColor">@color/orange</item>
+    </style>
+
+</resources>

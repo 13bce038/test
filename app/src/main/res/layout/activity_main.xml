@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment_toolbar"
+        android:name="com.example.pinak.screen.ToolbarWithBackBtnFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_main_ac_toolbar" />
+
+
+    <android.support.v4.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context="com.example.pinak.screen.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/banner_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner_image" />
+
+            <LinearLayout
+                android:id="@+id/ll_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@color/colorWhite"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/ll_child_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvLeft_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="90 hari"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvLeft_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masa Investasi" />
+
+                </LinearLayout>
+
+                <include layout="@layout/vertical_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_child_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvMiddle_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Tidak terjamin"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Pemberitahuan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_info_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingStart="25dp"
+                        android:text="Resiko" />
+
+                </LinearLayout>
+
+                <include layout="@layout/vertical_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_child_three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvRight_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1gram /orang"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvRight_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Batas" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/gray" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                style="@style/MyCustomTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+
+            <include layout="@layout/horizontal_divider" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:paddingTop="5dp" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dip"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="bottom"-->
+            <!--android:orientation="vertical">-->
+
+            <Button
+                android:id="@+id/bottom_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background"
+                android:text="Beli"
+                android:textColor="@color/colorWhite" />
+
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+
