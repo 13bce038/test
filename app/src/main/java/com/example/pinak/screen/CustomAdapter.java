@@ -6,7 +6,6 @@ import android.content.Context;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 
 public class CustomAdapter extends FragmentStatePagerAdapter {
 
@@ -19,7 +18,7 @@ public class CustomAdapter extends FragmentStatePagerAdapter {
         this.mContext = mContext;
         tabTitles = new String[]{
                 mContext.getString(R.string.tab_one_name),
-                mContext.getString(R.string.tab_two_name)
+                mContext.getString(R.string.tab_two_top)
         };
     }
 
@@ -45,10 +44,13 @@ public class CustomAdapter extends FragmentStatePagerAdapter {
     }
 
     View getTabView(int position) {
-        View v = LayoutInflater.from(mContext).inflate(R.layout.custom_tab, null);
-        TextView tv = v.findViewById(R.id.text1);
-        tv.setText(tabTitles[position]);
-        return v;
+        View view1 = LayoutInflater.from(mContext).inflate(R.layout.custom_tab_1, null);
+        View view2 = LayoutInflater.from(mContext).inflate(R.layout.custom_tab_2, null);
+
+        if (position == 0)
+            return view1;
+        else
+            return view2;
     }
 
 

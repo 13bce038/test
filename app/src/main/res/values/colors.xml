@@ -8,4 +8,6 @@
     <color name="darkGray">#999</color>
     <color name="black">#000</color>
     <color name="orange">#FFA500</color>
+    <color name="tab_background_selected">@color/colorPrimary</color>
+    <color name="tab_background_unselected">@color/black</color>
 </resources>
